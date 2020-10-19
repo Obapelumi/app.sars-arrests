@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.modal-header {
+  @apply flex justify-end bg-gray-100 p-2;
+}
+
+.form-group {
+  @apply text-gray-600;
+}
+
+.form-group label {
+  @apply bg-white text-xs relative ml-4 z-10 px-1 font-bold text-gray-600;
+}
+
+.form-group input {
+  @apply block -mt-3 rounded-lg p-2 border-2 bg-transparent border-gray-400 h-12  w-full;
+}
+
+.form-group input:focus {
+  @apply border-gray-600 outline-none;
+}
+
+.form-group input:focus + label {
+  @apply text-blue-primary;
+}
+
+.form-group .form-error {
+  @apply text-red-500 font-bold text-xs;
+}
+
+.btn {
+  @apply p-2 px-4 font-bold shadow;
+}
+
+.btn:hover {
+  @apply shadow-2xl;
+}
+
+.btn:focus {
+  @apply outline-none shadow;
+}
+
+.btn-dark {
+  @apply bg-dark text-white;
+}
