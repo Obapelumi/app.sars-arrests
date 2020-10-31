@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="fixed inset-0 z-10 bg-white shadow-sm h-16 p-3 w-screen flex justify-between items-center"
+      class="fixed inset-0 z-10 bg-white shadow-sm h-16 p-3 lg:px-16 w-screen flex justify-between items-center"
     >
       <img src="/icon.png" alt="logo" class="h-10 w-auto rounded-full" />
       <button to="/report" class="btn btn-dark" @click="showReportModal = true">
@@ -29,7 +29,7 @@
         </div>
       </modal>
     </div>
-    <div class="mt-20 mx-3">
+    <div class="mt-20 mx-3 lg:px-12">
       <div
         class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"
         v-if="!arrestsLoading && arrests.length > 0"
