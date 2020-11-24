@@ -81,15 +81,20 @@ export default {
 
       this.disabled = true;
 
+      const arrest = {
+        ...this.arrest,
+        location: this.place
+          ? this.place.formatted_address
+          : this.arrest.location,
+        googlePlaceId: this.place ? this.place.place_id : null
+      };
+
       try {
         if (!this.$auth.user) {
-          localStorage.setItem("lastReport", JSON.stringify(this.arrest));
+          localStorage.setItem("lastReport", JSON.stringify(arrest));
           return await this.twitterAuth();
         }
-        const response = await this.$axios.post("arrests", {
-          ...this.arrest,
-          googlePlaceId: this.place.place_id
-        });
+        const response = await this.$axios.post("arrests", arrest);
         this.arrest = { details: null, location: null };
         this.place = null;
         this.$store.dispatch("snackbar", "report submitted");

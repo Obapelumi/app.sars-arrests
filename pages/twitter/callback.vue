@@ -14,7 +14,6 @@ export default {
 
     this.setAuth({ token: token.token, user: { ...user, tweep } });
     const arrest = JSON.parse(localStorage.getItem("lastReport"));
-    console.log(arrest);
     const response = await this.$axios.post("arrests", arrest);
     localStorage.removeItem("lastArrest");
     this.$store.dispatch("snackbar", "report submitted");
