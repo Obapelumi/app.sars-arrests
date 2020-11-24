@@ -20,6 +20,7 @@ export default {
     this.$store.dispatch("snackbar", "report submitted");
     this.$router.replace("/");
   },
+  layout: "blank",
   mixins: [twitter]
 };
 </script>

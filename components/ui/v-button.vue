@@ -16,7 +16,16 @@
 
 <script>
 export default {
-  props: ["disabled", "loading"]
+  props: {
+    disabled: {
+      type: Boolean,
+      required: false
+    },
+    loading: {
+      type: String,
+      required: false
+    }
+  }
 };
 </script>
 

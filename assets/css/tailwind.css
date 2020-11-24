@@ -7,7 +7,7 @@
 }
 
 .form-group {
-  @apply text-gray-600;
+  @apply text-gray-700;
 }
 
 .form-group label {
@@ -27,7 +27,7 @@
 }
 
 .form-group .form-error {
-  @apply text-red-500 font-bold text-xs;
+  @apply text-red-500 font-bold text-xs italic;
 }
 
 .btn {
